@@ -38,6 +38,11 @@ int main(void)
                     printf("Place réservé pour %s\n", filmCategorieEnfant[t]);
                     return 0;
                 }
+                else if (dd == 'N' || dd == 'n')
+                {
+                    k();
+                    return 0;
+                }
                 else if (t >= 2)
                 {
                     k(); // renvoie vers la fonction k pour éviter de répéter
@@ -62,6 +67,11 @@ int main(void)
                     printf("Place réservé pour %s\n", filmCategorieAdo[t]);
                     return 0;
                 }
+                else if (dd == 'N' || dd == 'n')
+                {
+                    k();
+                    return 0;
+                }
                 else if (t >= 2)
                 {
                     k();
@@ -84,6 +94,11 @@ int main(void)
                 if (dd == 'Y' || dd == 'y')
                 {
                     printf("Place réservé pour %s\n", filmCategorieAdulte[t]);
+                    return 0;
+                }
+                else if (dd == 'N' || dd == 'n')
+                {
+                    k();
                     return 0;
                 }
                 else if (t >= 2)
