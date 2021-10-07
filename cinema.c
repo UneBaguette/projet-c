@@ -32,15 +32,10 @@ int main(void)
             printf("\n");
             for (int t = 0; t < m; t++)
             {
-                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieEnfant[t]);
+                char dd = get_char("Veux-tu voir %s ?\n (Y pour oui, autre touche pour non)\n", filmCategorieEnfant[t]);
                 if (dd == 'Y' || dd == 'y')
                 {
                     printf("Place réservé pour %s\n", filmCategorieEnfant[t]);
-                    return 0;
-                }
-                else if (dd == 'N' || dd == 'n')
-                {
-                    k();
                     return 0;
                 }
                 else if (t >= 2)
@@ -61,15 +56,10 @@ int main(void)
             printf("\n");
             for (int t = 0; t < m; t++)
             {
-                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieAdo[t]);
+                char dd = get_char("Veux-tu voir %s ?\n (Y pour oui, autre touche pour non)\n", filmCategorieAdo[t]);
                 if (dd == 'Y' || dd == 'y')
                 {
                     printf("Place réservé pour %s\n", filmCategorieAdo[t]);
-                    return 0;
-                }
-                else if (dd == 'N' || dd == 'n')
-                {
-                    k();
                     return 0;
                 }
                 else if (t >= 2)
@@ -90,15 +80,10 @@ int main(void)
             printf("\n");
             for (int t = 0; t < m; t++)
             {
-                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieAdulte[t]);
+                char dd = get_char("Veux-tu voir %s ?\n (Y pour oui, autre touche pour non)\n", filmCategorieAdulte[t]);
                 if (dd == 'Y' || dd == 'y')
                 {
                     printf("Place réservé pour %s\n", filmCategorieAdulte[t]);
-                    return 0;
-                }
-                else if (dd == 'N' || dd == 'n')
-                {
-                    k();
                     return 0;
                 }
                 else if (t >= 2)
