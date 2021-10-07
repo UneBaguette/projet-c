@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
-#include <string.h>
 
-void k(void); // je déclare la fonction au début du programme
+void k(void);
 int m = 3;
 
 //Chaque films dans sa catégorie respectif
@@ -11,9 +10,9 @@ string filmCategorieAdo[3] = {"Soirée chez popol", "Cédric découvre la vie", 
 string filmCategorieAdulte[3] = {"La chasse aux arbres", "Verdun, un combat sans fin", "Lili et ses copines"};
 
 // Les différentes catégories de films
-string catEnfant = "Catégorie Enfant";
-string catAdo = "Catégorie Ado";
-string catAdulte = "Catégorie Adulte";
+string cat1 = "Catégorie Enfant";
+string cat2 = "Catégorie Ado";
+string cat3 = "Catégorie Adulte";
 
 
 
@@ -24,64 +23,62 @@ int main(void)
     {
         if (ask <= 11)
         {
-            printf("Je te conseille la %s\n", catEnfant);
+            printf("Je te conseille la %s\nChoisi ton film : \n", cat1);
             printf("\n");
             for (int l = 0; l < m; l++)
             {
                 printf("Film %i : %s\n", l + 1, filmCategorieEnfant[l]);
             }
             printf("\n");
-            for (int o = 0; o < m; o++)
+            for (int t = 0; t < m; t++)
             {
-                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieEnfant[o]);
+                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieEnfant[t]);
                 if (dd == 'Y' || dd == 'y')
                 {
-                    printf("Place réservé pour %s\n", filmCategorieEnfant[o]);
+                    printf("Place réservé pour %s\n", filmCategorieEnfant[t]);
                     return 0;
                 }
-                else if (o >= 2)
+                else if (t >= 2)
                 {
                     k(); // renvoie vers la fonction k pour éviter de répéter
                     return 0;
                 }
             }
-            return 1;
         }
         else if (ask <= 17)
         {
-            printf("Je te conseille la %s\n", catAdo);
+            printf("Je te conseille la %s\nChoisi ton film : \n", cat2);
             printf("\n");
             for (int l = 0; l < m; l++)
             {
                 printf("Film %i : %s\n", l + 1, filmCategorieAdo[l]);
             }
             printf("\n");
-            for (int h = 0; h < m; h++)
+            for (int t = 0; t < m; t++)
             {
-                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieAdo[h]);
+                char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieAdo[t]);
                 if (dd == 'Y' || dd == 'y')
                 {
-                    printf("Place réservé pour %s\n", filmCategorieAdo[h]);
+                    printf("Place réservé pour %s\n", filmCategorieAdo[t]);
                     return 0;
                 }
-                else if (h >= 2)
+                else if (t >= 2)
                 {
                     k();
                     return 0;
                 }
             }
-            return 1;
         }
         else if (ask >= 18)
         {
-            printf("Je te conseille la %s\n", catAdulte);
+            printf("Je te conseille la %s\nChoisi ton film : \n", cat3);
             printf("\n");
             for (int l = 0; l < m; l++)
             {
                 printf("Film %i : %s\n", l + 1, filmCategorieAdulte[l]);
             }
             printf("\n");
-            for (int t = 0; t <m; t++)
+            for (int t = 0; t < m; t++)
             {
                 char dd = get_char("Veux-tu voir %s ?\n (Y or N)\n", filmCategorieAdulte[t]);
                 if (dd == 'Y' || dd == 'y')
@@ -95,6 +92,9 @@ int main(void)
                     return 0;
                 }
             }
+        }
+        else
+        {
             return 1;
         }
     }
