@@ -1,3 +1,3 @@
 # projet-c
 
-Movie project
+First project in C
